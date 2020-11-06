@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>vue-custom-element-demo</title><link href="/vue-tabs-code.css" rel="preload" as="style"><link href="/vue-tabs-code.js" rel="preload" as="script"><link href="/vue-tabs-code.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but vue-custom-element-demo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><tabs-code :data="tabsData"></tabs-code></div><script src="/vue.min.js"></script><script>window.onload = function () {
+      var app = new Vue({
+        el: '#app',
+        data: {
+          tabsData: [
+            {
+              label: "html",
+              lang: "html",
+              code: '<tabs-code :data="tabsData"></tabs-code>',
+            },
+            {
+              label: "css",
+              lang: "css",
+              code: ""
+            },
+            {
+              label: "js",
+              lang: "js",
+              code: `var app = new Vue({
+        el: '#app',
+        data: {
+          tabsData: [
+            {
+              label: "html",
+              lang: "html",
+              code: '<tabs-code :data="tabsData"></tabs-code>',
+            },
+            {
+              label: "css",
+              lang: "css",
+              code: "",
+            },
+            {
+              label: "js",
+              lang: "js",
+              code: "var a = 1",
+            },
+          ]
+        }
+      });`,
+            },
+          ]
+        }
+      });
+    }</script><script src="/vue-tabs-code.js"></script></body></html>

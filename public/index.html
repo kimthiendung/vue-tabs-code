@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>vue-custom-element-demo</title>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but vue-custom-element-demo doesn't work properly without JavaScript enabled. Please enable it
+      to continue.</strong>
+  </noscript>
+  <!-- built files will be auto injected -->
+  <!-- <tag-demo myprop="I can pass props!"></tag-demo>
+  <script>
+    console.info(document.querySelector('tag-demo'));
+  </script> -->
+  <div id="app">
+    <tabs-code :data="tabsData"></tabs-code>
+  </div>
+  <script src="/vue.min.js"></script>
+  <script>
+    window.onload = function () {
+      var app = new Vue({
+        el: '#app',
+        data: {
+          tabsData: [
+            {
+              label: "html",
+              lang: "html",
+              code: '<tabs-code :data="tabsData"></tabs-code>',
+            },
+            {
+              label: "css",
+              lang: "css",
+              code: ""
+            },
+            {
+              label: "js",
+              lang: "js",
+              code: `var app = new Vue({
+        el: '#app',
+        data: {
+          tabsData: [
+            {
+              label: "html",
+              lang: "html",
+              code: '<tabs-code :data="tabsData"></tabs-code>',
+            },
+            {
+              label: "css",
+              lang: "css",
+              code: "",
+            },
+            {
+              label: "js",
+              lang: "js",
+              code: "var a = 1",
+            },
+          ]
+        }
+      });`,
+            },
+          ]
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
